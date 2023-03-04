@@ -7,6 +7,7 @@ function PatientListPage(props) {
     };
   return (
     <Page>
+      <h1>Please select the patient from the EHR database</h1>
       <PatientList onSelect={onSelectHandler} />
     </Page>
   );
