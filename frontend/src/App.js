@@ -2,6 +2,7 @@ import "./App.css";
 import ReactDOM from "react-dom/client";
 import PatientListPage from "./pages/PatientListPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PatientHomePage } from "./pages/PatientHomePage";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<PatientListPage />} />
+          <Route path="/patienthomepage" element={<PatientHomePage />} />
         </Routes>
       </BrowserRouter>
     </div>
