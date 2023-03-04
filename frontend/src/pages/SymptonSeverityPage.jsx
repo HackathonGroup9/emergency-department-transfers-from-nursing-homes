@@ -9,7 +9,16 @@ function SymptonSeverityPage() {
         <Patient></Patient>
       </div>
       <div class="buttons" style={{ display: "flex" }}>
-        <Button color="red" size="massive" style={{ margin: 5 }}>
+        <Button
+          color="red"
+          size="massive"
+          style={{ margin: 5 }}
+          onClick={() =>
+            alert(
+              "CALL 911 \n\n Call Physician \n Gather the following info before calling:\n \n Situation \n Background \n Assessment \n Recommendation"
+            )
+          }
+        >
           Acute episode with wheezing, dyspnea, or respiratory distress
         </Button>
         <Button href="/pcb" color="yellow" size="massive" style={{ margin: 5 }}>
