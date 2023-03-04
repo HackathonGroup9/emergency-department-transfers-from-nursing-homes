@@ -17,7 +17,7 @@ public class SelectPatientService {
         this.patientRepository = patientRepository;
     }
 
-    public List<Patient> getAll() { return (List<Patient>) patientRepository.findAll(); }
+    public List<Patient> getAll() { return patientRepository.findAll(); }
 
     public Optional<Patient> getByPhn(int phn) {
         return patientRepository.findFirstByPhn(phn);
