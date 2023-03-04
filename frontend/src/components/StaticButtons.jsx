@@ -1,4 +1,3 @@
-import { sizeHeight } from "@mui/system";
 import React from "react";
 import { Button } from "semantic-ui-react";
 import logo from '../assets/logo2.png';
@@ -7,8 +6,8 @@ import '../assets/logo.css'
 function StaticButtons() {
   return (
     <div>
-      <div class="ui secondary  menu" style={{backgroundColor: '#39cccc'}}>
-        <img src={logo} alt="Logo" />
+      <div class="ui secondary  menu" style={{backgroundColor: '#39cccc' }}>
+        <img src={logo} alt="Logo"  href="/" style={{marginLeft: 20}}/>
         <a class="active item" href="/pcb" style={{color: "white"}}>Physician Comm Binder</a>
         <a class="item" style={{color: "white"}}>Physician Contact Numbers</a>
         <a class="item" href="/patienthomepage" style={{color: "white"}}>Return to unit-specific patients list</a>
@@ -19,7 +18,7 @@ function StaticButtons() {
               <i class="search link icon" style={{color: "white"}}></i>
             </div>
           </div>
-          <a class="ui item" style={{color: "white"}}>Logout</a>
+          <a class="ui item" style={{color: "white"}} href="/">Logout</a>
         </div>
       </div>
       {/* <Button>Physician Communication Binder</Button>
