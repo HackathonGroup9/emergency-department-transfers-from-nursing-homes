@@ -3,7 +3,7 @@ import { Button } from "semantic-ui-react";
 
 function Avatar() {
   return (
-    <div class="column">
+    <div >
       <Button>Neurological</Button>
       <Button>Respiratory</Button>
       <Button>Cardiovascular</Button>
