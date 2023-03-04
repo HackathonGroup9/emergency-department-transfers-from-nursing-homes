@@ -1,10 +1,12 @@
-import React from 'react'
-import Avatar from '../components/Avatar'
+import React from "react";
+import Avatar from "../components/Avatar";
 
 function AvatarPage() {
   return (
-    <div><Avatar></Avatar></div>
-  )
+      <page>
+        <Avatar></Avatar>
+      </page>
+  );
 }
 
-export default AvatarPage
+export default AvatarPage;
