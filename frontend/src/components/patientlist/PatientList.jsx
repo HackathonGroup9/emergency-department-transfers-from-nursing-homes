@@ -1,45 +1,47 @@
+import { useState } from "react";
 import { Button, Dropdown } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import "./PatientList.css";
 
 function PatientList() {
+  const [patient, setPatient] = useState("");
+
   const patients = [
     {
       key: "Jenny Hess",
       text: "Jenny Hess",
-      value: "Jenny Hess",
+      value: "1234",
     },
     {
       key: "Elliot Fu",
       text: "Elliot Fu",
-      value: "Elliot Fu",
+      value: "4321",
     },
     {
       key: "Stevie Feliciano",
       text: "Stevie Feliciano",
-      value: "Stevie Feliciano",
+      value: "4444",
     },
     {
       key: "Christian",
       text: "Christian",
-      value: "Christian",
+      value: "2222",
     },
     {
       key: "Matt",
       text: "Matt",
-      value: "Matt",
+      value: "1111",
     },
     {
       key: "Justen Kitsune",
       text: "Justen Kitsune",
-      value: "Justen Kitsune",
+      value: "9999",
     },
   ];
 
-  let selectedPatient = "";
-
   const getPatient = (e, value) => {
     console.log(value);
-    this.selectedPatient = value;
+    setPatient(value);
   };
 
   return (
@@ -50,9 +52,14 @@ function PatientList() {
         options={patients}
         onChange={(event, { value }) => getPatient(event, value)}
       />
-      <Button href="/patienthomepage" primary>
-        Next
-      </Button>
+      <Link
+        to={`/patienthomepage/${patient}`}
+        state={{
+          patient: patient,
+        }}
+      >
+        <Button primary>Next</Button>
+      </Link>
     </div>
   );
 }
