@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
 import { useLocation } from "react-router";
+import { Button } from "semantic-ui-react";
 import Page from "../components/page/Page";
 import Patient from "../components/Patient";
 
@@ -12,15 +12,12 @@ export const PatientHomePage = () => {
   return (
     <Page>
       <Patient></Patient>
-      <button
-        class="massive ui red button"
-        href="/avatarpage"
-      >
+      <Button size="massive" color="red" href="/avatarpage">
         Change in patient condition
-      </button>
-      <button class="massive ui yellow button">
+      </Button>
+      <Button size="massive" color="yellow">
         Abnormal Lab Test (patient is stable)
-      </button>
+      </Button>
     </Page>
   );
 };
