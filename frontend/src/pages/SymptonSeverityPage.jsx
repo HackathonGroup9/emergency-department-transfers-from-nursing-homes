@@ -8,17 +8,14 @@ function SymptonSeverityPage() {
       <div class="two wide column">
         <Patient></Patient>
       </div>
-      <div class="two wide column">
-        <button class="massive red ui button" style={{margin: 5}}>
+      <div class="buttons" style={{ display: "flex" }}>
+        <Button color="red" size="massive" style={{ margin: 5 }}>
           Acute episode with wheezing, dyspnea, or respiratory distress
-        </button>
-        <button
-          href="/pcb"
-          class="massive yellow ui button" style={{margin: 5}}
-        >
+        </Button>
+        <Button href="/pcb" color="yellow" size="massive" style={{ margin: 5 }}>
           Self limited episode, more extensive or less responsive to treatment
           than usual
-        </button>
+        </Button>
       </div>
     </div>
   );
