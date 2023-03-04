@@ -3,6 +3,15 @@ CREATE DATABASE ED_PATIENT_TRANSFER;
 USE ED_PATIENT_TRANSFER;
 -- CREATE USER 'javauser' IDENTIFIED BY 'Java@Pass';
 -- GRANT ALL PRIVILEGES ON *.* TO 'javauser';
+
+DROP TABLE IF EXISTS NOTIFICATION;
+CREATE TABLE NOTIFICATION 
+(
+	notification_id int PRIMARY KEY,
+    immediate bool NOT NULL,
+    message varchar(100) NOT NULL
+);
+
 DROP TABLE IF EXISTS PATIENT;
 CREATE TABLE PATIENT
 (
@@ -48,11 +57,11 @@ CREATE TABLE VITALSIGN
     vitalsign_name varchar(30) NOT NULL
 );
 
-DROP TABLE IF EXISTS SYSTEM_SEVERITY;
-CREATE TABLE SYSTEM_SEVERITY 
+DROP TABLE IF EXISTS SYMPTOM_SEVERITY;
+CREATE TABLE SYMPTOM_SEVERITY 
 (
 	severity_id int PRIMARY KEY,
-    severity_name varchar(30) NOT NULL,
+    severity_name varchar(100) NOT NULL,
     symptom_id int,
     notification_id int,
     CONSTRAINT FOREIGN KEY (symptom_id) REFERENCES SYMPTOM (symptom_id),
@@ -70,14 +79,11 @@ CREATE TABLE VITALSIGN_SEVERITY
     CONSTRAINT FOREIGN KEY (notification_id) REFERENCES NOTIFICATION (notification_id)
 );
 
-DROP TABLE IF EXISTS NOTIFICATION;
-CREATE TABLE NOTIFICATION 
-(
-	notification_id int PRIMARY KEY,
-    immediate bool NOT NULL,
-    message varchar(30) NOT NULL
-);
-
+INSERT INTO NOTIFICATION (notification_id, immediate, message)
+VALUES
+	(1, TRUE, "This requires immediate physician notification"),
+    (2, FALSE, "This is a non-immediate notification. Please add to Physician Binder");
+    
 INSERT INTO PATIENT (phn, last_name, first_name, birth_date)
 VALUES
 	(123451234, "Browning", "Jack", "1930-06-15"),
@@ -98,7 +104,7 @@ VALUES
     (6, "Reproductive"),
     (7, "Endocrine");
     
-INSERT INTO SYMPTOM (system_id, system_name)
+INSERT INTO SYMPTOM (symptom_id, symptom_name, system_id)
 VALUES
 	(1, "Asthma", 1),
     (2, "Cough", 1);
@@ -110,10 +116,7 @@ VALUES
     (3, "Associated with blood in sputum, new sputum  production, fever or respiratory distress", 2, 1),
     (4, "New or recent onset of persistent or nocturnal cough,  causing discomfort or disturbing sleep", 1, 2);
     
-INSERT INTO NOTIFICATION (notificataion_id, immediate, message)
-VALUES
-	(1, TRUE, "This requires immediate physician notification"),
-    (2, FALSE, "This is a non-immediate notification. Please add to Physician Binder");
+
     
 
     
