@@ -2,8 +2,10 @@ import "./App.css";
 import ReactDOM from "react-dom/client";
 import PatientListPage from "./pages/PatientListPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PatientHomePage } from "./pages/PatientHomePage";
 
-import{BrowserRouter, Routes,Route} from "react-router-dom"
+
+
 
 function App() {
   return (
