@@ -1,12 +1,17 @@
+import {useState, useEffect} from "react";
 
-import Axios from "axios";
-import Patient from "../classes/Patient";
 
-export const getpatients= ()=>{
-    Axios.get("http://localhost:8080/api/patients").then(
-      (response) =>{
-        // console.log(response.data.firstName + response.data.lastName);
-        return response.data;
-      }
-    );
-  };
+const stuff = 'http://api.weatherapi.com/v1/current.json?key=47a53ef1aeff4b29ba811204220210&q=London&api=no';
+
+function Api(){
+
+    const [temp, setTemp] = useState(0)
+
+    // const [temp, setTemp] = useState(0)
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const result = await fetch(stuff)
+    //     }
+    // })
+}
