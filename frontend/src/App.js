@@ -11,7 +11,7 @@ import PhysCommB from "./pages/PhysCommB";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App" >
 
       <BrowserRouter>
         <StaticButtons></StaticButtons>
