@@ -1,14 +1,17 @@
+import { sizeHeight } from "@mui/system";
 import React from "react";
 import { Button } from "semantic-ui-react";
-
+import logo from '../assets/logo2.png';
+import '../assets/logo.css'
 function StaticButtons() {
   return (
     <div>
       <div class="ui secondary  menu">
         <div>File or Dial</div>
+        <img src={logo} alt="Logo" />
         <a class="active item" href="/pcb">Physician Comm Binder</a>
         <a class="item">Physician Contact Numbers</a>
-        <a class="item">Return to unit-specific patients list</a>
+        <a class="item" href="/patienthomepage">Return to unit-specific patients list</a>
         <div class="right menu">
           <div class="item">
             <div class="ui icon input">
