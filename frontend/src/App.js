@@ -4,15 +4,13 @@ import PatientListPage from "./pages/PatientListPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PatientHomePage } from "./pages/PatientHomePage";
 
-
-
-
-function App() {
+export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/patienthomepage" element={<PatientHomePage/>}/>
+          <Route path="/" element={<PatientListPage />} />
+          <Route path="/patienthomepage" element={<PatientHomePage />} />
         </Routes>
       </BrowserRouter>
     </div>
