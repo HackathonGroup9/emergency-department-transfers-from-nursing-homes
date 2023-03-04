@@ -23,7 +23,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<PatientListPage onSelect={patientHandler}/>} />
           <Route path="/avatarpage" element={<AvatarPage patient={patient}/>} />
-          <Route path="/patienthomepage/:id" element={<PatientHomePage />} />
+          <Route path="/patienthomepage/:id" element={<PatientHomePage patient={patient}/>} />
           <Route
             path="/symptonseveritypage"
             element={<SymptonSeverityPage />}

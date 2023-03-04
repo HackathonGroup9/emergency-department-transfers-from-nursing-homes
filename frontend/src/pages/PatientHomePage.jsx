@@ -4,14 +4,14 @@ import { Button } from "semantic-ui-react";
 import Page from "../components/page/Page";
 import Patient from "../components/Patient";
 
-export const PatientHomePage = () => {
+export const PatientHomePage = (props) => {
   let data = useLocation();
   let patientId = data.state.patient;
   console.log(patientId);
 
   return (
     <Page>
-      <Patient></Patient>
+      <Patient patient={props.patient}></Patient>
       <Button size="massive" color="red" href="/avatarpage">
         Change in patient condition
       </Button>

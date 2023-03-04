@@ -1,66 +1,60 @@
-import { useState } from "react";
 import { Button, Dropdown } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./PatientList.css";
+import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
 
 function PatientList(props) {
   const [patient, setPatient] = useState("");
 
-  const patients = [
-    {
-      key: "Jenny Hess",
-      text: "Jenny Hess",
-      value: "1234",
-    },
-    {
-      key: "Elliot Fu",
-      text: "Elliot Fu",
-      value: "4321",
-    },
-    {
-      key: "Stevie Feliciano",
-      text: "Stevie Feliciano",
-      value: "4444",
-    },
-    {
-      key: "Christian",
-      text: "Christian",
-      value: "2222",
-    },
-    {
-      key: "Matt",
-      text: "Matt",
-      value: "1111",
-    },
-    {
-      key: "Justen Kitsune",
-      text: "Justen Kitsune",
-      value: "9999",
-    },
-  ];
+  const [patientList, setPatientList] = useState([]);
+
+  const fetchPatients = useCallback(async () => {
+    await axios
+        .get("http://localhost:8080/api/patients")
+        .then((response) => {
+          setPatientList(response.data);
+        })
+        .catch((error) => console.log(error.response.data));
+  }, []);
+
+  useEffect(() => {
+    fetchPatients();
+  }, [fetchPatients]);
 
   const getPatient = (e, value) => {
     console.log(value);
     setPatient(value);
+
+    for (let patient of patientList) {
+        if (patient.phn === value)
+            props.onSelect(patient)
+    }
   };
 
   return (
-    <div className="PatientList">
-      <Dropdown
-        placeholder="Select Patient"
-        selection
-        options={patients}
-        onChange={(event, { value }) => getPatient(event, value)}
-      />
-      <Link
-        to={`/patienthomepage/${patient}`}
-        state={{
-          patient: patient,
-        }}
-      >
-        <Button primary onClick={props.onSelect({phn : 1, firstName: "Test", lastName: "Test"})}>Next</Button>
-      </Link>
-    </div>
+      <div className="PatientList">
+        <Dropdown
+            placeholder="Select Patient"
+            selection
+            options={patientList.map((patient) => {
+              return {
+                key: patient.phn,
+                text: patient.firstName + " " + patient.lastName,
+                value: patient.phn,
+              };
+            })}
+            onChange={(event, { value }) => getPatient(event, value)}
+        />
+        <Link
+            to={`/patienthomepage/${patient}`}
+            state={{
+              patient: patient,
+            }}
+        >
+          <Button primary>Next</Button>
+        </Link>
+      </div>
   );
 }
 
