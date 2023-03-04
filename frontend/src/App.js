@@ -6,6 +6,7 @@ import { PatientHomePage } from "./pages/PatientHomePage";
 // import { Avatar } from "@mui/material";/
 import AvatarPage from "./pages/AvatarPage";
 import StaticButtons from "./components/StaticButtons";
+import SymptonSeverityPage from "./pages/SymptonSeverityPage";
 
 export default function App() {
   return (
@@ -23,6 +24,10 @@ export default function App() {
           <Route
             path="/patienthomepage"
             element={<PatientHomePage />}
+          />
+          <Route
+            path="/symptonseveritypage"
+            element={<SymptonSeverityPage />}
           />
         </Routes>
 
