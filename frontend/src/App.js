@@ -1,10 +1,18 @@
-import "./App.css";
-import PatientListPage from "./pages/PatientListPage";
+// import "./App.css";
+// import PatientListPage from "./pages/PatientListPage";
+
+import{BrowserRouter, Routes,Route} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <PatientListPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element/>
+        </Routes>
+      </BrowserRouter>
+
+      {/* <PatientListPage /> */}
     </div>
   );
 }
