@@ -1,10 +1,11 @@
-import PatientList from "../components/PatientList";
+import Page from "../components/page/Page";
+import PatientList from "../components/patientlist/PatientList";
 
 function PatientListPage() {
   return (
-    <div className="PatientListPage">
+    <Page>
       <PatientList />
-    </div>
+    </Page>
   );
 }
 
