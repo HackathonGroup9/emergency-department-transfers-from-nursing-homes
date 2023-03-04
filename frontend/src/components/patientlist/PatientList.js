@@ -1,4 +1,5 @@
 import { Button, Dropdown } from "semantic-ui-react";
+import "./PatientList.css";
 
 function PatientList() {
   const patients = [
@@ -36,13 +37,8 @@ function PatientList() {
 
   return (
     <div className="PatientList">
-      <Dropdown
-        placeholder="Select Patient"
-        fluid
-        selection
-        options={patients}
-      />
-      <Button primary>Click Here</Button>
+      <Dropdown placeholder="Select Patient" selection options={patients} />
+      <Button primary>Next</Button>
     </div>
   );
 }
