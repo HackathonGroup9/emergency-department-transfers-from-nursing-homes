@@ -3,7 +3,7 @@ import { Button, Dropdown } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./PatientList.css";
 
-function PatientList() {
+function PatientList(props) {
   const [patient, setPatient] = useState("");
 
   const patients = [
@@ -58,7 +58,7 @@ function PatientList() {
           patient: patient,
         }}
       >
-        <Button primary>Next</Button>
+        <Button primary onClick={props.onSelect({phn : 1, firstName: "Test", lastName: "Test"})}>Next</Button>
       </Link>
     </div>
   );
