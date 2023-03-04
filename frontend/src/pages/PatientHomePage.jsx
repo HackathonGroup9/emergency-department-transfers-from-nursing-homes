@@ -12,15 +12,15 @@ export const PatientHomePage = () => {
   return (
     <Page>
       <Patient></Patient>
-      <Button
+      <button
         class="massive ui red button"
         href="/avatarpage"
       >
         Change in patient condition
-      </Button>
-      <Button class="massive ui yellow button">
+      </button>
+      <button class="massive ui yellow button">
         Abnormal Lab Test (patient is stable)
-      </Button>
+      </button>
     </Page>
   );
 };
