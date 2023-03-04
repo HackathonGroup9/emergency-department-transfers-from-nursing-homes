@@ -16,18 +16,9 @@ export default function App() {
       <BrowserRouter>
         <StaticButtons></StaticButtons>
         <Routes>
-          <Route
-            path="/"
-            element={<PatientListPage />}
-          />
-          <Route
-            path="/avatarpage"
-            element={<AvatarPage />}
-          />
-          <Route
-            path="/patienthomepage"
-            element={<PatientHomePage />}
-          />
+          <Route path="/" element={<PatientListPage />} />
+          <Route path="/avatarpage" element={<AvatarPage />} />
+          <Route path="/patienthomepage/:id" element={<PatientHomePage />} />
           <Route
             path="/symptonseveritypage"
             element={<SymptonSeverityPage />}
