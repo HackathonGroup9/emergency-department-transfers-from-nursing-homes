@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
+import Page from "../components/page/Page";
 import Patient from "../components/Patient";
 
 function SymptonSeverityPage() {
   return (
-    <div>
+    <Page>
       <div class="two wide column">
         <Patient></Patient>
       </div>
@@ -17,7 +18,7 @@ function SymptonSeverityPage() {
           than usual
         </Button>
       </div>
-    </div>
+    </Page>
   );
 }
 
