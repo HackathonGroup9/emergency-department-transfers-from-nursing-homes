@@ -6,7 +6,7 @@ USE ED_PATIENT_TRANSFER;
 DROP TABLE IF EXISTS PATIENT;
 CREATE TABLE PATIENT
 (
-	pcn int PRIMARY KEY,
+	phn int PRIMARY KEY,
     last_name varchar(30) NOT NULL,
     first_name varchar(30) NOT NULL,
     birth_date date NOT NULL
