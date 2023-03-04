@@ -7,5 +7,5 @@ import java.util.Optional;
 
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Long> {
-    Optional<Patient> findFirstByPhn(int phn);
+    Optional<Patient> findFirstByPhn(long phn);
 }

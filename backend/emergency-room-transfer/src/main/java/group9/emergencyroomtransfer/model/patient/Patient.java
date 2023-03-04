@@ -14,7 +14,7 @@ public class Patient implements Serializable {
 
     @Id
     @Column(name = "phn")
-    private Long phn;
+    private long phn;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
