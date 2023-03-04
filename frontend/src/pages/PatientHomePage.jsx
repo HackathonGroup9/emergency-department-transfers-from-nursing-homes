@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "semantic-ui-react";
 import { useLocation } from "react-router";
+import Page from "../components/page/Page";
 
 export const PatientHomePage = () => {
   let data = useLocation();
@@ -8,10 +9,10 @@ export const PatientHomePage = () => {
   console.log(patientId);
 
   return (
-    <div>
+    <Page>
       PatientHomePage
       <Button href="/avatarpage">Change in patient condition</Button>
       <Button>Abnormal Lab Test (patient is stable)</Button>
-    </div>
+    </Page>
   );
 };
