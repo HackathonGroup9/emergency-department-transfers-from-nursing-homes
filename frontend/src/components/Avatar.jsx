@@ -4,17 +4,17 @@ import { Button } from "semantic-ui-react";
 function Avatar() {
   return (
     <div >
-      <Button>Neurological</Button>
-      <Button>Respiratory</Button>
-      <Button>Cardiovascular</Button>
-      <Button>Gastrointestinal</Button>
-      <Button>Genitourinary</Button>
-      <Button>Integumentory</Button>
-      <Button>Musculoskeletal</Button>
-      <Button>ENT</Button>
-      <Button>Labs and Diagnostics</Button>
-      <Button>Vitals</Button>
-      <Button>Misc</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Neurological</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Respiratory</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Cardiovascular</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Gastrointestinal</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Genitourinary</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Integumentory</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Musculoskeletal</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>ENT</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Labs and Diagnostics</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Vitals</Button>
+      <Button class="ui toggle button" style={{margin: 5}}>Misc</Button>
     </div>
   );
 }
