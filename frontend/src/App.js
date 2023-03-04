@@ -1,8 +1,9 @@
-// import "./App.css";
-// import PatientListPage from "./pages/PatientListPage";
+import "./App.css";
+import ReactDOM from "react-dom/client";
+import PatientListPage from "./pages/PatientListPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import{BrowserRouter, Routes,Route} from "react-router-dom"
-import { PatientHomePage } from "./pages/PatientHomePage";
 
 function App() {
   return (
@@ -12,10 +13,9 @@ function App() {
           <Route path="/patienthomepage" element={<PatientHomePage/>}/>
         </Routes>
       </BrowserRouter>
-
-      {/* <PatientListPage /> */}
     </div>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

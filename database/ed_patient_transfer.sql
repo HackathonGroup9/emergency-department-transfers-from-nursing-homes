@@ -9,7 +9,7 @@ CREATE TABLE PATIENT
 	phn int PRIMARY KEY,
     last_name varchar(30) NOT NULL,
     first_name varchar(30) NOT NULL,
-    dob date NOT NULL
+    birth_date date NOT NULL
 --     weight double NOT NULL,
 --     blood_pressure varchar(8) NOT NULL
 );
