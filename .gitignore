@@ -6,3 +6,10 @@
 .DS_Store
 /backend/.DS_Store
 /web/node_modules
+
+/backend/emergency-room-transfer/.vscode/
+/backend/emergency-room-transfer/.idea/
+/backend/emergency-room-transfer/emergency-room-transfer.iml
+/backend/emergency-room-transfer/target/
+/backend/emergency-room-transfer/.DS_Store
+
