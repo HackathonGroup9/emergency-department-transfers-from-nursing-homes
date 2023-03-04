@@ -1,10 +1,10 @@
 import Page from "../components/page/Page";
 import PatientList from "../components/patientlist/PatientList";
 
-function PatientListPage() {
+function PatientListPage(props) {
   return (
     <Page>
-      <PatientList />
+      <PatientList onSelect={props.onSelect} />
     </Page>
   );
 }

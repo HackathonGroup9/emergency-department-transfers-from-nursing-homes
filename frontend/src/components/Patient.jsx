@@ -1,8 +1,10 @@
 import React from "react";
 
-function Patient() {
+function Patient(props) {
+    console.log(props.patient)
   return (
     <div>
+      <p>{}</p>
       <h1>Patient info</h1>
       <p>Smith, John</p>
       <p>DOB 1/1/1923</p>

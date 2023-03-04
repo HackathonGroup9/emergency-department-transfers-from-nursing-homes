@@ -5,11 +5,11 @@ import SignsSymptoms from "../components/SignsSymptoms";
 import Page from "../components/page/Page";
 import Patient from "../components/Patient";
 // import "../components/Button.css"
-function AvatarPage() {
+function AvatarPage(props) {
   return (
     <Page>
       <div class="ui grid" style={{alignItems: "stretch", width: 1000}}>
-        <div style={{marginLeft: 30}}><Patient></Patient></div>
+        <div style={{marginLeft: 30}}><Patient patient={props.patient}></Patient></div>
         <div class="three wide column">
           <Avatar></Avatar>
         </div>
