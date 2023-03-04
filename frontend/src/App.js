@@ -7,11 +7,14 @@ import { PatientHomePage } from "./pages/PatientHomePage";
 import AvatarPage from "./pages/AvatarPage";
 import StaticButtons from "./components/StaticButtons";
 import SymptonSeverityPage from "./pages/SymptonSeverityPage";
+import PhysCommB from "./pages/PhysCommB";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App" >
+
       <BrowserRouter>
+        <StaticButtons></StaticButtons>
         <Routes>
           <Route
             path="/"
@@ -29,9 +32,12 @@ export default function App() {
             path="/symptonseveritypage"
             element={<SymptonSeverityPage />}
           />
+          <Route
+            path="/pcb"
+            element={<PhysCommB />}
+          />
         </Routes>
 
-        <StaticButtons></StaticButtons>
       </BrowserRouter>
     </div>
   );
