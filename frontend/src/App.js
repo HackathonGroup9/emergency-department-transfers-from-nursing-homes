@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import PatientListPage from "./pages/PatientListPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PatientHomePage } from "./pages/PatientHomePage";
+// import { Avatar } from "@mui/material";/
+import AvatarPage from "./pages/AvatarPage";
 
 export default function App() {
   return (
@@ -10,7 +12,9 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<PatientListPage />} />
+          <Route path="/avatarpage" element={<AvatarPage/>} />
           <Route path="/patienthomepage" element={<PatientHomePage />} />
+
         </Routes>
       </BrowserRouter>
     </div>
