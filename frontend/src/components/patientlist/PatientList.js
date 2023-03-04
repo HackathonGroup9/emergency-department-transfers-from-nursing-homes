@@ -37,10 +37,9 @@ function PatientList() {
 
   let selectedPatient = "";
 
-  const getPatient = (event, { value }) => {
-    selectedPatient = value;
+  const getPatient = (e, value) => {
     console.log(value);
-    console.log(selectedPatient);
+    this.selectedPatient = value;
   };
 
   return (
@@ -49,7 +48,7 @@ function PatientList() {
         placeholder="Select Patient"
         selection
         options={patients}
-        onChange={() => getPatient}
+        onChange={(event, { value }) => getPatient(event, value)}
       />
       <Button href="/patienthomepage" primary>
         Next
