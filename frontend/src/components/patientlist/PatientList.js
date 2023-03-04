@@ -35,10 +35,25 @@ function PatientList() {
     },
   ];
 
+  let selectedPatient = "";
+
+  const getPatient = (event, { value }) => {
+    selectedPatient = value;
+    console.log(value);
+    console.log(selectedPatient);
+  };
+
   return (
     <div className="PatientList">
-      <Dropdown placeholder="Select Patient" selection options={patients} />
-      <Button primary>Next</Button>
+      <Dropdown
+        placeholder="Select Patient"
+        selection
+        options={patients}
+        onChange={() => getPatient}
+      />
+      <Button href="/patienthomepage" primary>
+        Next
+      </Button>
     </div>
   );
 }
