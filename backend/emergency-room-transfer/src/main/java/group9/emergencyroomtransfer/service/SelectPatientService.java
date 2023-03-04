@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class SelectPatientService {
-    private PatientRepository patientRepository;
+    private final PatientRepository patientRepository;
 
     @Autowired
     public SelectPatientService(PatientRepository patientRepository) {
